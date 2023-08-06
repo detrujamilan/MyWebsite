@@ -3,27 +3,34 @@ import { BiMoon } from "react-icons/bi";
 import { BiSun } from "react-icons/bi";
 import Herosection from "./Herosection";
 
-const Header = () => {
-  const [changeimg, setChangeImg] = useState(false);
+const Header = ({ setDarkTheme, darktheme }) => {
   return (
-    <div className="container mx-auto px-6">
-      <div className="flex justify-between items-center lg:py-5">
-        <div>
-          <h1 className="text-lavender font-semibold">Milan</h1>
-        </div>
-        <div
-          onClick={() => setChangeImg((show) => !show)}
-          className="cursor-pointer"
-        >
-          {changeimg ? (
-            <BiSun className="text-white" />
-          ) : (
-            <BiMoon className="text-white" />
-          )}
+    <>
+      <div className="= max-w-[1000px] mx-auto px-6 sticky top-0" id="Home">
+        <div className="flex justify-between items-center py-3 lg:py-5">
+          <div>
+            <h1
+              className={` ${
+                darktheme ? "text-shark" : "text-lavender"
+              }  font-semibold`}
+            >
+              Milan
+            </h1>
+          </div>
+          <div
+            onClick={() => setDarkTheme((show) => !show)}
+            className="cursor-pointer"
+          >
+            {darktheme ? (
+              <BiSun className={`${darktheme && "text-black"}`} />
+            ) : (
+              <BiMoon className="text-white" />
+            )}
+          </div>
         </div>
       </div>
-      <Herosection/>
-    </div>
+      <Herosection darktheme={darktheme} />
+    </>
   );
 };
 
