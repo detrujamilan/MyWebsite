@@ -4,6 +4,7 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = ({ darktheme, setDarkTheme }) => {
   return (
@@ -13,6 +14,7 @@ const Home = ({ darktheme, setDarkTheme }) => {
       <Experience darktheme={darktheme} />
       <Services darktheme={darktheme} />
       <Contact darktheme={darktheme} />
+      <Footer darktheme={darktheme} />
     </div>
   );
 };

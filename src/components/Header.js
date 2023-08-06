@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BiMoon } from "react-icons/bi";
 import { BiSun } from "react-icons/bi";
 import Herosection from "./Herosection";

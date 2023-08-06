@@ -50,10 +50,10 @@ const Herosection = ({ darktheme }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between py-8 lg:py-10">
+        <div className="flex justify-between py-10 lg:py-14">
           <div>
             <div>
-              <a href="https://github.com/detrujamilan" target="_blank">
+              <a href="https://github.com/detrujamilan" target="_blank" rel="">
                 <BsLinkedin />
               </a>
             </div>
@@ -61,6 +61,7 @@ const Herosection = ({ darktheme }) => {
               <a
                 href="https://www.linkedin.com/in/milan-detruja-366463249/"
                 target="_blank"
+                rel="#"
               >
                 <BsGithub />
               </a>

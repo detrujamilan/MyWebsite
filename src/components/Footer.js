@@ -1,45 +1,98 @@
 import React from "react";
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiMessageSquareDetail } from "react-icons/bi";
-import { BiBriefcaseAlt2 } from "react-icons/bi";
-import { BiBookHeart } from "react-icons/bi";
+import {
+  BiLogoFacebook,
+  BiLogoLinkedin,
+  BiLogoInstagram,
+} from "react-icons/bi";
+import { AiOutlineTwitter } from "react-icons/ai";
 
 const Footer = () => {
-  const SectionMap = [
+  const Navbar = [
     {
-      Icon: <AiOutlineHome />,
+      name: "Home",
       href: "#Home",
     },
     {
-      Icon: <AiOutlineUser />,
+      name: "About",
       href: "#About",
     },
     {
-      Icon: <BiBookHeart />,
+      name: "Skills",
       href: "#Experience",
     },
     {
-      Icon: <BiBriefcaseAlt2 />,
-      href: "#",
+      name: "Work",
+      href: "#Work",
     },
     {
-      Icon: <BiMessageSquareDetail />,
+      name: "Contact",
       href: "#Contact",
     },
   ];
+  const Icon = [
+    {
+      Icon: <BiLogoFacebook />,
+    },
+    {
+      Icon: <AiOutlineTwitter />,
+    },
+    {
+      Icon: <BiLogoLinkedin />,
+    },
+    {
+      Icon: <BiLogoInstagram />,
+    },
+  ];
   return (
-    <div className="max-w-[1000px] mx-auto px-4">
-      <div className="flex fixed right-0 lg:gap-8 left-0 bottom-5 bg-mirage w-fit m-auto lg:px-10 lg:py-5 rounded-full">
-        {SectionMap.map((val, id) => {
-          return (
-            <>
-              <div key={id} className="border lg:p-2 rounded-xl cursor-pointer">
-                <a href={val.href}>{val.Icon}</a>
+    <div className="mt-10 lg:mt-14">
+      <div className="bg-dull">
+        <div className="lg:py-14 py-10">
+          <div className="flex justify-center text-shark font-medium text-3xl">
+            <h1>Milan</h1>
+          </div>
+          <div className="flex justify-center gap-8 items-center py-8">
+            {Navbar.map((val, id) => {
+              return (
+                <>
+                  <div className="text-shark font-normal ">
+                    <a href={val.href}>
+                      <h1>{val.name} </h1>
+                    </a>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+          <div className="flex justify-center gap-8 items-center mb-24">
+            <div className="bg-shark rounded-md">
+              <div className="p-[8px] text-lavender text-lg cursor-pointer ">
+                <a>
+                  <BiLogoFacebook />
+                </a>
               </div>
-            </>
-          );
-        })}
+            </div>
+            <div className="bg-shark rounded-md">
+              <div className="p-[8px] text-lavender text-lg cursor-pointer ">
+                <AiOutlineTwitter />
+              </div>
+            </div>{" "}
+            <div className="bg-shark rounded-md">
+              <div className="p-[8px] text-lavender text-lg cursor-pointer ">
+                <a
+                  href="https://www.linkedin.com/in/milan-detruja-366463249/"
+                  target="_blank"
+                >
+                  <BiLogoLinkedin />
+                </a>
+              </div>
+            </div>{" "}
+            <div className="bg-shark rounded-md">
+              <div className="p-[8px] text-lavender text-lg cursor-pointer ">
+                <BiLogoInstagram />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
